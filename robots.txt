@@ -1,0 +1,8 @@
+# robots.txt für StationMarkt.de
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /private/
+
+# Sitemap einbinden, damit Google alle Seiten schneller findet
+Sitemap: https://stationmarkt.de/sitemap.xml
