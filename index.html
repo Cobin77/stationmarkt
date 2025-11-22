@@ -3,9 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StationMarkt – Bald online</title>
-<meta name="description" content="StationMarkt – Innovative Automatenstationen. Bald verfügbar. Kontaktieren Sie uns unter Kontakt@StationMarkt.de.">
+<title>StationMarkt – Innovative Automatenstationen</title>
+<meta name="description" content="StationMarkt – Innovative Automatenstationen, Snacks, Getränke und Produkte des täglichen Bedarfs. Kontakt: Kontakt@StationMarkt.de">
+<meta name="keywords" content="Automaten, Verkaufsstationen, Snacks, Getränke, StationMarkt, Automatenstation, kontakt">
+<meta name="author" content="StationMarkt">
+<meta name="robots" content="index, follow">
+
+<!-- Favicon & Icons -->
+<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#fb923c">
+
+<!-- Open Graph / Social Media -->
+<meta property="og:title" content="StationMarkt – Innovative Automatenstationen">
+<meta property="og:description" content="StationMarkt – Innovative Automatenstationen, Snacks, Getränke und Produkte des täglichen Bedarfs. Kontakt: Kontakt@StationMarkt.de">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.stationmarkt.de/">
+<meta property="og:image" content="Logos/StationMarkt_Logo512x512.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="StationMarkt – Innovative Automatenstationen">
+<meta name="twitter:description" content="StationMarkt – Innovative Automatenstationen, Snacks, Getränke und Produkte des täglichen Bedarfs. Kontakt: Kontakt@StationMarkt.de">
+<meta name="twitter:image" content="Logos/StationMarkt_Logo512x512.png">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "StationMarkt",
+  "url": "https://www.stationmarkt.de",
+  "logo": "https://www.stationmarkt.de/Logos/StationMarkt_Logo512x512.png",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "email": "Kontakt@StationMarkt.de",
+    "contactType": "Customer Service"
+  }]
+}
+</script>
+
+<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
 /* Grundstyles */
 * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter', sans-serif; }
@@ -18,9 +60,9 @@ header {
   display:flex; justify-content:space-between; align-items:center;
   padding:20px 50px; position:sticky; top:0; background:#fff; box-shadow:0 2px 12px rgba(0,0,0,0.06); z-index:1000;
 }
-header h1 { font-size:1.8rem; font-weight:700; color:#0d6efd; }
+header h1 { font-size:1.8rem; font-weight:700; color:#fb923c; }
 nav a { margin-left:25px; font-weight:600; color:#111; transition:0.3s; }
-nav a:hover { color:#0d6efd; }
+nav a:hover { color:#fb923c; }
 
 /* Hero */
 .hero {
@@ -28,17 +70,17 @@ nav a:hover { color:#0d6efd; }
   height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
   text-align:center; padding:0 20px; overflow:hidden;
 }
-.hero h2 { font-size:3rem; font-weight:700; margin-bottom:20px; color:#0d6efd; opacity:0; transform:translateY(40px); transition:0.8s ease-out; }
+.hero h2 { font-size:3rem; font-weight:700; margin-bottom:20px; color:#fb923c; opacity:0; transform:translateY(40px); transition:0.8s ease-out; }
 .hero p { font-size:1.2rem; margin-bottom:30px; max-width:600px; color:#333; opacity:0; transform:translateY(40px); transition:0.8s ease-out 0.2s; }
 .hero button {
-  padding:15px 35px; font-size:1.1rem; font-weight:700; color:#fff; background:#0d6efd; border:none; border-radius:50px; transition:0.3s;
+  padding:15px 35px; font-size:1.1rem; font-weight:700; color:#fff; background:#fb923c; border:none; border-radius:50px; transition:0.3s;
   opacity:0; transform:translateY(40px); transition:0.8s ease-out 0.4s;
 }
 .hero button:hover { background:#0b5ed7; transform: translateY(-3px); }
 
 /* Hero Shapes */
 .shape { position:absolute; opacity:0.15; animation: float 8s ease-in-out infinite; }
-.shape.triangle { width:80px; height:80px; clip-path: polygon(50% 0%,0% 100%,100% 100%); background:#0d6efd; top:10%; left:5%; }
+.shape.triangle { width:80px; height:80px; clip-path: polygon(50% 0%,0% 100%,100% 100%); background:#fb923c; top:10%; left:5%; }
 .shape.circle { width:60px; height:60px; border-radius:50%; background:#6610f2; top:70%; left:80%; }
 .shape.rect { width:100px; height:50px; background:#00e0ff; top:50%; left:50%; }
 
@@ -58,17 +100,17 @@ nav a:hover { color:#0d6efd; }
   opacity:0; transform:translateY(40px); transition:0.8s ease-out;
 }
 .feature-card::before {
-  content:""; position:absolute; width:50px; height:50px; background:#0d6efd; clip-path: polygon(50% 0%,0% 100%,100% 100%); top:-20px; right:-20px; opacity:0.2;
+  content:""; position:absolute; width:50px; height:50px; background:#fb923c; clip-path: polygon(50% 0%,0% 100%,100% 100%); top:-20px; right:-20px; opacity:0.2;
 }
 .feature-card:hover { transform:translateY(-8px); box-shadow:0 20px 40px rgba(0,0,0,0.15); }
-.feature-card h4 { font-size:1.4rem; margin-bottom:15px; color:#0d6efd; }
+.feature-card h4 { font-size:1.4rem; margin-bottom:15px; color:#fb923c; }
 .feature-card p { font-size:1rem; color:#555; }
 
 /* Contact */
 .contact { padding:80px 20px; text-align:center; background:#f8f9fa; border-top:1px solid #eee; position:relative; overflow:hidden; }
-.contact h3 { font-size:2rem; margin-bottom:20px; color:#0d6efd; opacity:0; transform:translateY(40px); transition:0.8s ease-out; }
+.contact h3 { font-size:2rem; margin-bottom:20px; color:#fb923c; opacity:0; transform:translateY(40px); transition:0.8s ease-out; }
 .contact p { font-size:1.1rem; margin-bottom:30px; color:#333; opacity:0; transform:translateY(40px); transition:0.8s ease-out 0.2s; }
-.contact a { display:inline-block; padding:15px 35px; font-weight:700; color:#fff; background:#0d6efd; border-radius:50px; transition:0.3s; opacity:0; transform:translateY(40px); transition:0.8s ease-out 0.4s; }
+.contact a { display:inline-block; padding:15px 35px; font-weight:700; color:#fff; background:#fb923c; border-radius:50px; transition:0.3s; opacity:0; transform:translateY(40px); transition:0.8s ease-out 0.4s; }
 .contact a:hover { background:#0b5ed7; transform:translateY(-3px); }
 
 /* Footer */
@@ -85,7 +127,7 @@ footer { padding:30px 20px; text-align:center; background:#fff; color:#888; font
 <body>
 
 <header>
-  <h1>StationMarkt</h1>
+  <h1><img src="Logos/StationMarkt_Logo.png" alt="StationMarkt Logo"></h1>
   <nav>
     <a href="#features">Features</a>
     <a href="#contact">Kontakt</a>
@@ -139,7 +181,11 @@ const faders = document.querySelectorAll('.hero h2, .hero p, .hero button, .feat
 const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
 const appearOnScroll = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
-    if(entry.isIntersecting){ entry.target.style.opacity = 1; entry.target.style.transform = 'translateY(0)'; observer.unobserve(entry.target);}
+    if(entry.isIntersecting){
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = 'translateY(0)';
+      observer.unobserve(entry.target);
+    }
   });
 }, appearOptions);
 faders.forEach(fader => appearOnScroll.observe(fader));
