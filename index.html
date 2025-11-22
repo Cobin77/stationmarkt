@@ -4,29 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>StationMarkt – Innovative Automatenstationen</title>
-<meta name="description" content="StationMarkt – Innovative Automatenstationen, Snacks, Getränke und Produkte des täglichen Bedarfs. Kontakt: Kontakt@StationMarkt.de">
-<meta name="keywords" content="Automaten, Verkaufsstationen, Snacks, Getränke, StationMarkt, Automatenstation, kontakt">
-<meta name="author" content="StationMarkt">
-<meta name="robots" content="index, follow">
 
-<!-- Favicon & Icons -->
+<meta name="description" content="StationMarkt – Moderne Automatenstationen für Snacks, Getränke und Produkte des täglichen Bedarfs. Gegründet von Mehdi Oublal & Marcel Bolzek. Bald verfügbar.">
+<meta name="keywords" content="Automaten, Verkaufsstation, Snacks, Getränke, 24/7 Automat, StationMarkt, Automatenstation, moderne Automaten, Mehdi Oublal, Marcel Bolzek">
+<meta name="author" content="StationMarkt">
+
+<!-- Favicon -->
 <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#fb923c">
 
-<!-- Open Graph / Social Media -->
+<!-- Open Graph -->
 <meta property="og:title" content="StationMarkt – Innovative Automatenstationen">
-<meta property="og:description" content="StationMarkt – Innovative Automatenstationen, Snacks, Getränke und Produkte des täglichen Bedarfs. Kontakt: Kontakt@StationMarkt.de">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.stationmarkt.de/">
+<meta property="og:description" content="StationMarkt – Moderne Automatenstationen für Snacks, Getränke und Produkte des täglichen Bedarfs.">
 <meta property="og:image" content="Logos/StationMarkt_Logo512x512.png">
+<meta property="og:url" content="https://www.stationmarkt.de">
+<meta property="og:type" content="website">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="StationMarkt – Innovative Automatenstationen">
-<meta name="twitter:description" content="StationMarkt – Innovative Automatenstationen, Snacks, Getränke und Produkte des täglichen Bedarfs. Kontakt: Kontakt@StationMarkt.de">
+<meta name="twitter:description" content="StationMarkt – Moderne Automatenstationen für Snacks, Getränke und Produkte des täglichen Bedarfs.">
 <meta name="twitter:image" content="Logos/StationMarkt_Logo512x512.png">
 
 <!-- Structured Data -->
@@ -35,139 +35,214 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "StationMarkt",
+  "founders": [
+    { "@type": "Person", "name": "Mehdi Oublal" },
+    { "@type": "Person", "name": "Marcel Bolzek" }
+  ],
   "url": "https://www.stationmarkt.de",
   "logo": "https://www.stationmarkt.de/Logos/StationMarkt_Logo512x512.png",
-  "contactPoint": [{
+  "contactPoint": {
     "@type": "ContactPoint",
     "email": "Kontakt@StationMarkt.de",
     "contactType": "Customer Service"
-  }]
+  }
 }
 </script>
 
-<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-/* Grundstyles */
 * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter', sans-serif; }
 body { background:#ffffff; color:#111; overflow-x:hidden; line-height:1.6; }
-a { text-decoration:none; color:inherit; }
-button { cursor:pointer; }
 
 /* Header */
 header {
+  position:sticky; top:0;
   display:flex; justify-content:space-between; align-items:center;
-  padding:20px 50px; position:sticky; top:0; background:#fff; box-shadow:0 2px 12px rgba(0,0,0,0.06); z-index:1000;
+  padding:18px 50px; background:#fff; 
+  box-shadow:0 2px 12px rgba(0,0,0,0.06); z-index:1000;
 }
-header h1 { font-size:1.8rem; font-weight:700; color:#fb923c; }
-nav a { margin-left:25px; font-weight:600; color:#111; transition:0.3s; }
+
+/* Desktop Nav */
+nav { display:flex; gap:25px; }
+nav a { font-weight:600; color:#111; transition:0.3s; }
 nav a:hover { color:#fb923c; }
+
+/* Mobile Menu Icon */
+.menu-btn {
+  display:none; flex-direction:column; gap:5px; cursor:pointer;
+}
+.menu-btn div {
+  width:28px; height:3px; background:#111; border-radius:2px; transition:.3s;
+}
+
+/* Mobile Menu Dropdown */
+.mobile-nav {
+  display:none; flex-direction:column; background:white; width:100%;
+  padding:20px; box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+.mobile-nav a {
+  padding:12px 0; font-weight:600; border-bottom:1px solid #eee;
+}
 
 /* Hero */
 .hero {
-  position:relative;
-  height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
+  position:relative; height:100vh;
+  display:flex; flex-direction:column; justify-content:center; align-items:center;
   text-align:center; padding:0 20px; overflow:hidden;
 }
-.hero h2 { font-size:3rem; font-weight:700; margin-bottom:20px; color:#fb923c; opacity:0; transform:translateY(40px); transition:0.8s ease-out; }
-.hero p { font-size:1.2rem; margin-bottom:30px; max-width:600px; color:#333; opacity:0; transform:translateY(40px); transition:0.8s ease-out 0.2s; }
-.hero button {
-  padding:15px 35px; font-size:1.1rem; font-weight:700; color:#fff; background:#fb923c; border:none; border-radius:50px; transition:0.3s;
-  opacity:0; transform:translateY(40px); transition:0.8s ease-out 0.4s;
+.hero h2 {
+  font-size:3.2rem; font-weight:700; color:#fb923c;
+  opacity:0; transform:translateY(40px); transition:.8s ease-out;
 }
-.hero button:hover { background:#0b5ed7; transform: translateY(-3px); }
+.hero p {
+  font-size:1.25rem; color:#333; max-width:650px; margin-top:20px;
+  opacity:0; transform:translateY(40px); transition:.8s ease-out .2s;
+}
+.hero button {
+  margin-top:30px; padding:15px 35px; font-size:1.1rem;
+  color:white; background:#fb923c; border:none; border-radius:50px;
+  font-weight:700; transition:.3s; opacity:0; transform:translateY(40px);
+  transition:.8s ease-out .4s;
+}
+.hero button:hover {
+  background:#0b5ed7; transform:translateY(-4px);
+}
 
-/* Hero Shapes */
-.shape { position:absolute; opacity:0.15; animation: float 8s ease-in-out infinite; }
-.shape.triangle { width:80px; height:80px; clip-path: polygon(50% 0%,0% 100%,100% 100%); background:#fb923c; top:10%; left:5%; }
-.shape.circle { width:60px; height:60px; border-radius:50%; background:#6610f2; top:70%; left:80%; }
-.shape.rect { width:100px; height:50px; background:#00e0ff; top:50%; left:50%; }
+/* Floating Shapes */
+.shape { position:absolute; opacity:0.13; animation:float 8s infinite ease-in-out; }
+.shape.big { width:160px; height:160px; border-radius:50%; background:#fb923c; top:12%; left:8%; }
+.shape.small { width:90px; height:90px; background:#00d0ff; clip-path:polygon(50% 0%,0% 100%,100% 100%); top:70%; left:75%; }
+.shape.rect { width:120px; height:50px; background:#6610f2; top:40%; left:55%; border-radius:10px; }
+.shape.dot { width:30px; height:30px; background:#ff006a; border-radius:50%; top:20%; left:80%; }
 
 @keyframes float {
-  0%,100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(15deg); }
+  0%,100% { transform:translateY(0); }
+  50% { transform:translateY(-30px); }
 }
 
 /* Features */
 .features {
-  padding:100px 20px; max-width:1200px; margin:0 auto; text-align:center; position:relative;
+  padding:100px 20px; max-width:1200px; margin:auto; text-align:center;
 }
-.features h3 { font-size:2rem; margin-bottom:50px; color:#111; opacity:0; transform:translateY(40px); transition:0.8s ease-out; }
-.feature-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:40px; }
+.features h3 {
+  font-size:2.4rem; color:#111; margin-bottom:50px;
+  opacity:0; transform:translateY(40px); transition:.8s ease-out;
+}
+.feature-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:40px;
+}
 .feature-card {
-  background:#f9f9f9; padding:30px 20px; border-radius:20px; box-shadow:0 10px 25px rgba(0,0,0,0.08); transition:0.3s; text-align:center; position:relative;
-  opacity:0; transform:translateY(40px); transition:0.8s ease-out;
+  background:#fafafa; padding:35px 25px; border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.07);
+  transition:.35s; opacity:0; transform:translateY(40px); 
 }
-.feature-card::before {
-  content:""; position:absolute; width:50px; height:50px; background:#fb923c; clip-path: polygon(50% 0%,0% 100%,100% 100%); top:-20px; right:-20px; opacity:0.2;
+.feature-card:hover { transform:translateY(-8px); box-shadow:0 20px 50px rgba(0,0,0,0.12); }
+.feature-card h4 { font-size:1.4rem; color:#fb923c; margin-bottom:12px; }
+.feature-card p { color:#555; }
+
+/* About Section */
+.about {
+  padding:100px 20px; max-width:1000px; margin:0 auto; text-align:center;
 }
-.feature-card:hover { transform:translateY(-8px); box-shadow:0 20px 40px rgba(0,0,0,0.15); }
-.feature-card h4 { font-size:1.4rem; margin-bottom:15px; color:#fb923c; }
-.feature-card p { font-size:1rem; color:#555; }
+.about h3 { font-size:2.3rem; margin-bottom:25px; color:#fb923c; }
+.about p { font-size:1.15rem; color:#333; margin-bottom:30px; line-height:1.7; }
 
 /* Contact */
-.contact { padding:80px 20px; text-align:center; background:#f8f9fa; border-top:1px solid #eee; position:relative; overflow:hidden; }
-.contact h3 { font-size:2rem; margin-bottom:20px; color:#fb923c; opacity:0; transform:translateY(40px); transition:0.8s ease-out; }
-.contact p { font-size:1.1rem; margin-bottom:30px; color:#333; opacity:0; transform:translateY(40px); transition:0.8s ease-out 0.2s; }
-.contact a { display:inline-block; padding:15px 35px; font-weight:700; color:#fff; background:#fb923c; border-radius:50px; transition:0.3s; opacity:0; transform:translateY(40px); transition:0.8s ease-out 0.4s; }
+.contact {
+  padding:80px 20px; text-align:center; background:#f8f9fa; border-top:1px solid #eee;
+}
+.contact h3 { font-size:2rem; color:#fb923c; margin-bottom:20px; }
+.contact p { font-size:1.1rem; color:#333; margin-bottom:20px; }
+.contact a {
+  padding:15px 35px; background:#fb923c; color:white; border-radius:50px;
+  font-weight:700; transition:.3s;
+}
 .contact a:hover { background:#0b5ed7; transform:translateY(-3px); }
 
 /* Footer */
-footer { padding:30px 20px; text-align:center; background:#fff; color:#888; font-size:0.9rem; border-top:1px solid #eee; }
+footer {
+  text-align:center; padding:25px; color:#777; font-size:.9rem;
+}
 
 /* Responsive */
-@media(max-width:768px){
-  .hero h2 { font-size:2.2rem; }
-  .hero p { font-size:1rem; }
-  .feature-grid { gap:25px; }
+@media (max-width:900px){
+  nav { display:none; }
+  .menu-btn { display:flex; }
+  .hero h2 { font-size:2.4rem; }
+  .hero p { font-size:1.05rem; }
 }
 </style>
 </head>
+
 <body>
 
 <header>
-  <h1><img src="Logos/StationMarkt_Logo.png" alt="StationMarkt Logo"></h1>
+  <img src="Logos/StationMarkt_Logo.png" alt="StationMarkt Logo">
+
   <nav>
     <a href="#features">Features</a>
+    <a href="#about">Über uns</a>
     <a href="#contact">Kontakt</a>
   </nav>
+
+  <div class="menu-btn" onclick="toggleMobileMenu()">
+    <div></div><div></div><div></div>
+  </div>
 </header>
 
+<div class="mobile-nav" id="mobileMenu">
+  <a href="#features" onclick="toggleMobileMenu()">Features</a>
+  <a href="#about" onclick="toggleMobileMenu()">Über uns</a>
+  <a href="#contact" onclick="toggleMobileMenu()">Kontakt</a>
+</div>
+
 <section class="hero">
-  <div class="shape triangle"></div>
-  <div class="shape circle"></div>
+  <div class="shape big"></div>
+  <div class="shape small"></div>
   <div class="shape rect"></div>
+  <div class="shape dot"></div>
+
   <h2>Bald online: StationMarkt.de</h2>
-  <p>Wir bauen gerade unsere innovative Plattform für automatisierte Verkaufsstationen auf. Bleiben Sie gespannt!</p>
+  <p>Wir entwickeln moderne Automatenstationen, die Snacks, Getränke und wichtige Alltagsprodukte rund um die Uhr verfügbar machen.</p>
   <button onclick="window.location.href='mailto:Kontakt@StationMarkt.de'">Jetzt Kontakt aufnehmen</button>
 </section>
 
 <section class="features" id="features">
-  <h3>Unsere Features</h3>
+  <h3>Unsere Vorteile</h3>
   <div class="feature-grid">
     <div class="feature-card">
       <h4>Automatisierte Stationen</h4>
-      <p>Unsere Automaten versorgen Sie rund um die Uhr mit Snacks, Getränken und Produkten des täglichen Bedarfs.</p>
+      <p>Unsere Automaten sind 24/7 verfügbar und bieten ein breites, modernes Sortiment.</p>
     </div>
     <div class="feature-card">
-      <h4>Modernes Design</h4>
-      <p>Alle Automaten sind stylisch gestaltet, einfach zu bedienen und passen in jede Umgebung.</p>
+      <h4>Effiziente Technologie</h4>
+      <p>Wir setzen auf moderne Hardware und smarte Softwarelösungen.</p>
     </div>
     <div class="feature-card">
-      <h4>Flexibles Sortiment</h4>
-      <p>Passen Sie die Auswahl der Produkte individuell an Standorte und Kundenwünsche an.</p>
+      <h4>Skalierbares System</h4>
+      <p>Unsere Standorte lassen sich schnell und flexibel erweitern.</p>
     </div>
     <div class="feature-card">
-      <h4>Kontakt & Support</h4>
-      <p>Unser Team ist jederzeit erreichbar. Schreiben Sie uns an Kontakt@StationMarkt.de.</p>
+      <h4>Partnerschaften</h4>
+      <p>Unternehmen profitieren von zusätzlichen Einnahmequellen und höherer Kundenfrequenz.</p>
     </div>
   </div>
 </section>
 
+<section class="about" id="about">
+  <h3>Über StationMarkt</h3>
+  <p><strong>StationMarkt</strong> wurde gegründet von <strong>Mehdi Oublal</strong> und <strong>Marcel Bolzek</strong> (GbR).  
+  Unsere Vision ist es, moderne Automatenstationen in ganz Deutschland strategisch zu platzieren, um Menschen rund um die Uhr mit qualitativen Produkten zu versorgen.</p>
+
+  <p>Wir entwickeln ein innovatives System, das traditionelle Automaten neu definiert: digitale Steuerung, moderne Technik, starke Optik und ein Sortiment, das exakt an die Umgebung angepasst wird.</p>
+
+  <p>Unser Ziel ist klar: ein deutschlandweit skalierbares Netz an modernen Verkaufsstationen, die den Alltag einfacher machen.</p>
+</section>
+
 <section class="contact" id="contact">
-  <h3>Kontaktieren Sie uns</h3>
-  <p>Sie haben Fragen oder möchten Partner werden? Schreiben Sie uns einfach:</p>
+  <h3>Kontakt</h3>
+  <p>Fragen, Kooperationen oder Standortvorschläge?</p>
   <a href="mailto:Kontakt@StationMarkt.de">Kontakt@StationMarkt.de</a>
 </section>
 
@@ -176,19 +251,27 @@ footer { padding:30px 20px; text-align:center; background:#fff; color:#888; font
 </footer>
 
 <script>
-// Scroll-Fade-In Animation
-const faders = document.querySelectorAll('.hero h2, .hero p, .hero button, .features h3, .feature-card, .contact h3, .contact p, .contact a');
-const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
-const appearOnScroll = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.style.opacity = 1;
-      entry.target.style.transform = 'translateY(0)';
-      observer.unobserve(entry.target);
+// Mobile Menu
+function toggleMobileMenu(){
+  const menu = document.getElementById("mobileMenu");
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+
+// Fade-in animations on scroll
+const faders = document.querySelectorAll(
+  '.hero h2, .hero p, .hero button, .features h3, .feature-card, .about h3, .about p, .contact h3, .contact p, .contact a'
+);
+const observer = new IntersectionObserver((entries, obs) => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      e.target.style.opacity = "1";
+      e.target.style.transform = "translateY(0)";
+      obs.unobserve(e.target);
     }
   });
-}, appearOptions);
-faders.forEach(fader => appearOnScroll.observe(fader));
+},{ threshold:0.2 });
+
+faders.forEach(el => observer.observe(el));
 </script>
 
 </body>
